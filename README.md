@@ -7,7 +7,7 @@ Projeto do Aplicativo para divulgação de Eventos - FestejApp
 Primeiro, instale o Node.js:
 - [Node.js](https://nodejs.org/en/)
 
-### Ionic
+### 2. Ionic
 Instalar o Ionic
 ~~~
 npm install -g ionic
