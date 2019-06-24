@@ -35,6 +35,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'user',
+        children: [
+          {
+            path: '',
+            loadChildren: '../user/user.module#UserPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
