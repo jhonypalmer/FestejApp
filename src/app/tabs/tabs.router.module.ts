@@ -35,11 +35,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'user',
+        path: 'profile',
         children: [
           {
             path: '',
-            loadChildren: '../user/user.module#UserPageModule'
+            loadChildren: '../profile/profile.module#ProfilePageModule'
           }
         ]
       },

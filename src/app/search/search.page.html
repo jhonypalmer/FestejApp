@@ -6,4 +6,39 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Categorias</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      
+      <ion-toggle><p>Todos</p>></ion-toggle>
+
+      <!-- Toggles in a List -->
+      <ion-list>
+        <ion-item>
+          <ion-label>Todos</ion-label>
+          <ion-toggle [(ngModel)]="todos"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Aprender</ion-label>
+          <ion-toggle [(ngModel)]="aprender" disabled="true"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Shows</ion-label>
+          <ion-toggle [(ngModel)]="shows"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Esportes</ion-label>
+          <ion-toggle [(ngModel)]="esportes"></ion-toggle>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
