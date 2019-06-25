@@ -1,33 +1,35 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Home
+      FestejApp
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Bem vindo ao FestejApp</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Agora você pode acompanhar os eventos que estão acontecendo na sua cidade.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <!-- Searchbar with a placeholder -->
+  <ion-searchbar placeholder="Pesquisar"></ion-searchbar>
+
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/festejapp.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-title>Bem vindo ao FestejApp</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Agora você pode acompanhar os eventos que estão acontecendo na sua cidade.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Resources</ion-label>
+    </ion-list-header>
+    <ion-item href="https://ionicframework.com/docs/">
+      <ion-icon slot="start" color="medium" name="book"></ion-icon>
+      <ion-label>Ionic Documentation</ion-label>
+    </ion-item>
+    <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+      <ion-icon slot="start" color="medium" name="build"></ion-icon>
+      <ion-label>Scaffold Out Your App</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
