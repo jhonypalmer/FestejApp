@@ -1,21 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Pesquisar
+      <b>Pesquisar</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card class="welcome-card">
-    <ion-card-header>
-      <ion-card-title>Categorias</ion-card-title>
-    </ion-card-header>
+  <ion-card class="card-ion-toggle">
 
     <ion-card-content>
-      
-      <ion-toggle><p>Todos</p>></ion-toggle>
-
+     
+      <ion-card-title><b>Categorias</b></ion-card-title>
+ 
       <!-- Toggles in a List -->
       <ion-list>
         <ion-item>
@@ -34,11 +31,105 @@
         </ion-item>
 
         <ion-item>
-          <ion-label>Esportes</ion-label>
-          <ion-toggle [(ngModel)]="esportes"></ion-toggle>
+          <ion-label>Negócios</ion-label>
+          <ion-toggle [(ngModel)]="negocios"></ion-toggle>
         </ion-item>
 
       </ion-list>
     </ion-card-content>
+
+    <ion-card-content>
+      
+        <ion-card-title><b>Local</b></ion-card-title>
+        <!-- Toggles in a List -->
+        <ion-list>
+          <ion-item>
+            <ion-label>Escolher Cidade</ion-label>
+            <ion-toggle [(ngModel)]="escolherCidade" disabled="true"></ion-toggle>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Minha Localização</ion-label>
+            <ion-toggle [(ngModel)]="minhaLocalizacao"></ion-toggle>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Todas as cidades</ion-label>
+            <ion-toggle [(ngModel)]="todasCidades" disabled="true"></ion-toggle>
+          </ion-item>
+  
+        </ion-list>
+      </ion-card-content>
+
   </ion-card>
+
+  <ion-card class="card-ion-chip">
+        
+      <ion-card-content>
+
+        <ion-card-title><b>Categorias</b></ion-card-title>
+        <!-- Toggles in a List -->
+        
+        <ion-chip>
+            <ion-label>Todos</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label>Aprender</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label>Festas</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label>Shows</ion-label>
+        </ion-chip>
+        <ion-chip>
+            <ion-label>Negócios</ion-label>
+        </ion-chip>
+
+      </ion-card-content>
+
+      <ion-card-content>
+
+          <ion-card-title><b>Local</b></ion-card-title>
+          <!-- Toggles in a List -->
+          
+          <ion-chip>
+              <ion-icon name="pin"></ion-icon>
+              <ion-label>Minha Localização</ion-label>
+          </ion-chip>
+          <ion-chip>
+              <ion-label>Escolher cidade</ion-label>
+          </ion-chip>
+          <ion-chip>
+              <ion-label>Todas as Cidades</ion-label>
+          </ion-chip>
+  
+        </ion-card-content>
+
+        <ion-card-content>
+
+            <ion-card-title><b>Data</b></ion-card-title>
+            <!-- Toggles in a List -->
+            
+            <ion-chip>
+                <ion-label>Todos</ion-label>
+            </ion-chip>
+            <ion-chip>
+                <ion-label >Hoje</ion-label>
+            </ion-chip>
+            <ion-chip>
+                <ion-label >Escolher Data</ion-label>
+                <ion-icon name="calendar"></ion-icon>
+            </ion-chip>
+    
+          </ion-card-content>
+           
+    </ion-card>
+
+    <!-- Expand -->
+    <ion-button expand="full" href="#">
+      <ion-icon slot="start" name="search"></ion-icon>
+      Pesquisar
+    </ion-button>
+
 </ion-content>
