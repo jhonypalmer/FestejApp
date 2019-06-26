@@ -6,4 +6,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+    <ion-card class="events-card">
+      <ion-card-header>
+        <ion-card-title>Show dos Esquecidos</ion-card-title>
+      </ion-card-header>
+      <ion-img src="/assets/festejapp.jpg"></ion-img>
+      <ion-card-content>
+        <p>Show para lembrar todos as pessoas esquecidas na sociedade.</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>
