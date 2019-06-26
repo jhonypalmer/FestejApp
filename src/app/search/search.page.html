@@ -22,7 +22,7 @@
 
         <ion-item>
           <ion-label>Aprender</ion-label>
-          <ion-toggle [(ngModel)]="aprender" disabled="true"></ion-toggle>
+          <ion-toggle [(ngModel)]="aprender"></ion-toggle>
         </ion-item>
 
         <ion-item>
@@ -61,70 +61,31 @@
         </ion-list>
       </ion-card-content>
 
-  </ion-card>
-
-  <ion-card class="card-ion-chip">
-        
       <ion-card-content>
-
-        <ion-card-title><b>Categorias</b></ion-card-title>
+      
+        <ion-card-title><b>Data</b></ion-card-title>
         <!-- Toggles in a List -->
-        
-        <ion-chip>
+        <ion-list>
+          <ion-item>
             <ion-label>Todos</ion-label>
-        </ion-chip>
-        <ion-chip>
-            <ion-label>Aprender</ion-label>
-        </ion-chip>
-        <ion-chip>
-            <ion-label>Festas</ion-label>
-        </ion-chip>
-        <ion-chip>
-            <ion-label>Shows</ion-label>
-        </ion-chip>
-        <ion-chip>
-            <ion-label>Negócios</ion-label>
-        </ion-chip>
-
+            <ion-toggle [(ngModel)]="todos"></ion-toggle>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Hoje</ion-label>
+            <ion-toggle [(ngModel)]="hoje"></ion-toggle>
+          </ion-item>
+  
+          <ion-item>
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Escolher data</ion-label>
+            <ion-toggle [(ngModel)]="escolherData"></ion-toggle>
+          </ion-item>
+  
+        </ion-list>
       </ion-card-content>
 
-      <ion-card-content>
-
-          <ion-card-title><b>Local</b></ion-card-title>
-          <!-- Toggles in a List -->
-          
-          <ion-chip>
-              <ion-icon name="pin"></ion-icon>
-              <ion-label>Minha Localização</ion-label>
-          </ion-chip>
-          <ion-chip>
-              <ion-label>Escolher cidade</ion-label>
-          </ion-chip>
-          <ion-chip>
-              <ion-label>Todas as Cidades</ion-label>
-          </ion-chip>
-  
-        </ion-card-content>
-
-        <ion-card-content>
-
-            <ion-card-title><b>Data</b></ion-card-title>
-            <!-- Toggles in a List -->
-            
-            <ion-chip>
-                <ion-label>Todos</ion-label>
-            </ion-chip>
-            <ion-chip>
-                <ion-label >Hoje</ion-label>
-            </ion-chip>
-            <ion-chip>
-                <ion-label >Escolher Data</ion-label>
-                <ion-icon name="calendar"></ion-icon>
-            </ion-chip>
-    
-          </ion-card-content>
-           
-    </ion-card>
+  </ion-card>
 
     <!-- Expand -->
     <ion-button expand="full" href="#">
