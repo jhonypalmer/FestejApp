@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events.page.scss'],
 })
 export class EventsPage implements OnInit {
+  public title_card: string = "Festa dos Esquecidos 02";
 
   constructor() { }
 
