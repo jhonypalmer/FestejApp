@@ -13,7 +13,19 @@ Instalar o Ionic
 npm install -g ionic
 ~~~
 
+## Baixar o projeto
+
+~~~
+[https://github.com/jhonypalmer/FestejApp](https://github.com/jhonypalmer/FestejApp)
+~~~
+
+## Criar pasta dentro do projeto
+
+Crie uma pasta dentro da pasta do projeto chamada: *node_modules*
+
 ## Executando o aplicativo
+
+Abra o prompt de comando dentro da pasta do projeto e execute
 ~~~
 cd FestejApp
 ionic serve
