@@ -15,13 +15,14 @@ npm install -g ionic
 
 ## Baixar o projeto
 
+Repositório do Projeto
 ~~~
-[https://github.com/jhonypalmer/FestejApp](https://github.com/jhonypalmer/FestejApp)
+(https://github.com/jhonypalmer/FestejApp)
 ~~~
 
 ## Criar pasta dentro do projeto
 
-Crie uma pasta dentro da pasta do projeto chamada: *node_modules*
+Após baixar o projeto, crie uma pasta dentro da pasta do projeto chamada: *node_modules*
 
 ## Executando o aplicativo
 
