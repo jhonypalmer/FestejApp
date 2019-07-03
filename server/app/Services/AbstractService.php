@@ -13,7 +13,7 @@ abstract class AbstractService
 
     public function read($id = null)
     {
-        if (is_null($id)) {
+        if (!is_null($id)) {
             return call_user_func($this->model.'::find', $id);
         } else {
             return call_user_func($this->model.'::all');

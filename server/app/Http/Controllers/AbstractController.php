@@ -9,7 +9,7 @@ use Illuminate\Http\Response;
 class AbstractController extends Controller
 {
     /**
-     * @var AbstractService $service;
+     * @var \App\Services\AbstractService $service;
      */
     protected $service;
 
