@@ -17,7 +17,7 @@
       <ion-list>
         <ion-item>
           <ion-label>Todos</ion-label>
-          <ion-toggle [(ngModel)]="todos"></ion-toggle>
+          <ion-toggle [(ngModel)]="todos" (ngModelChange)="Pesquisar()"></ion-toggle>
         </ion-item>
 
         <ion-item>
