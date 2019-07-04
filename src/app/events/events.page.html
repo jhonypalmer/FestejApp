@@ -1,12 +1,15 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title class="header-title-page">Eventsa</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-card class="events-card">
+    <ion-card class="events-card" (click)="">
       <ion-card-header>
         <ion-card-title>{{title_card}}</ion-card-title>
       </ion-card-header>
@@ -23,22 +26,20 @@
           </button>
         </ion-col>
         <ion-col>
-            <button ion-button icon-left clear large>
-              <!--div>22h00</div-->
-              <ion-icon name="clock"></ion-icon>
-            </button>
-          </ion-col>
+          <button ion-button icon-left clear large>
+            <!--div>22h00</div-->
+            <ion-icon name="clock"></ion-icon>
+          </button>
+        </ion-col>
       </ion-row>
 
-      
+
     </ion-card>
   </ion-list>
 
   <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-      <ion-infinite-scroll-content
-        loadingSpinner="bubbles"
-        loadingText="Loading more data...">
-      </ion-infinite-scroll-content>
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
   </ion-infinite-scroll>
-  
+
 </ion-content>

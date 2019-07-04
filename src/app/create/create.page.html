@@ -1,10 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>create</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    <ion-title><b>Cadastrar Eventos</b></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-img src="/assets/categoria1.jpg"></ion-img>
 
   <form onsubmit="processForm(event)">
@@ -57,16 +60,11 @@
 
   </form>
 
-  <!-- fab placed to the top end -->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button expand="full" href="profile">
-      <ion-icon name="checkmark"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-  <!-- fab placed to the top end -->
-  <ion-fab vertical="bottom" horizontal="the" slot="fixed" style="background-color: red">
-    <ion-fab-button expand="full" href="profile">
-      <ion-icon name="close"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <div class="ion-padding">
+    
+    <ion-button expand="block" href="events" type="submit" class="ion-no-margin">
+      <ion-icon slot="start" name="save"></ion-icon>
+      Salvar
+    </ion-button>
+  </div>
 </ion-content>
