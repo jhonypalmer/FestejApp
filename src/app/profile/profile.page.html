@@ -5,18 +5,66 @@
 </ion-header>
 
 <ion-content>
+  <ion-card *ngIf='login'>
+    <ion-card-header>
+      <ion-card-title>Ops!</ion-card-title>
+      <ion-card-subtitle>Você precisa se autenticar para ver isso!</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-input placeholder="exemplo@email.com" (change)='changeEmail($event)' [value]='email'></ion-input>
+      <ion-input placeholder="senha" type="password" (change)='changePassword($event)'></ion-input>
+      <ion-button expand="block" (click)='efetuaLogin()'>Entrar</ion-button>
+      <ion-button expand="block" fill='outline' (click)='cadastroClick()'>Cadastre-se</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf='cadastro'>
+    <ion-card-header>
+      <ion-card-title>Cadastre-se</ion-card-title>
+      <ion-card-subtitle>Fique informado</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-input placeholder="exemplo@email.com" (change)='changeEmail($event)' [value]='email'></ion-input>
+      <ion-input placeholder="senha" type="password" (change)='changePassword($event)'></ion-input>
+      <ion-input placeholder="confirme sua senha" type="password" (change)='changePasswordConfirmation($event)'>
+      </ion-input>
+      <ion-button expand="block" (click)='efetuaCadastro()'>Salvar</ion-button>
+      <ion-button expand="block" fill='outline' (click)='loginClick()'>Já possui conta?</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngIf='perfil'>
+    <ion-row class='profile-section'>
+      <ion-col size='2'>
+        <ion-avatar>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+      </ion-col>
+      <ion-col size='10'>
+        <h2>Nome da pessoa</h2>
+        <h4>email@exemplo.com</h4>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<!-->ion-header>
+  <ion-toolbar>
+    <ion-title><b>Perfil</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
   <ion-button expand="full" href="create-event">
     <ion-icon slot="start" name="create-event"></ion-icon>
     Cadastrar Evento
   </ion-button>
 
-  <!-- fab placed to the top end -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button expand="full" href="create-event">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
-
-
-</ion-content>
+</ion-content-->
