@@ -1,18 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      <b>Pesquisar</b>
+      <b>Explorar</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+  <div class="ion-padding">
+    <ion-button expand="block" href="events" type="submit" class="ion-no-margin">
+      <ion-icon slot="start" name="search"></ion-icon>
+      Explorar
+    </ion-button>
+  </div>
   <ion-card class="card-ion-toggle">
 
     <ion-card-content>
-     
+
       <ion-card-title><b>Categorias</b></ion-card-title>
- 
+
       <!-- Toggles in a List -->
       <ion-list>
         <ion-item>
@@ -21,8 +29,8 @@
         </ion-item>
 
         <ion-item>
-          <ion-label>Aprender</ion-label>
-          <ion-toggle [(ngModel)]="aprender"></ion-toggle>
+          <ion-label>Gastronomia</ion-label>
+          <ion-toggle [(ngModel)]="gastronomia"></ion-toggle>
         </ion-item>
 
         <ion-item>
@@ -35,62 +43,68 @@
           <ion-toggle [(ngModel)]="negocios"></ion-toggle>
         </ion-item>
 
+        <ion-item>
+          <ion-label>Estudos</ion-label>
+          <ion-toggle [(ngModel)]="estudos" (ngModelChange)="Pesquisar()"></ion-toggle>
+        </ion-item>
+
       </ion-list>
     </ion-card-content>
 
     <ion-card-content>
-      
-        <ion-card-title><b>Local</b></ion-card-title>
-        <!-- Toggles in a List -->
-        <ion-list>
-          <ion-item>
+
+      <ion-card-title><b>Local</b></ion-card-title>
+      <!-- Toggles in a List -->
+      <ion-list>
+        <!----ion-item>
             <ion-label>Escolher Cidade</ion-label>
             <ion-toggle [(ngModel)]="escolherCidade" disabled="true"></ion-toggle>
-          </ion-item>
-  
-          <ion-item>
-            <ion-label>Minha Localização</ion-label>
-            <ion-toggle [(ngModel)]="minhaLocalizacao"></ion-toggle>
-          </ion-item>
-  
-          <ion-item>
+          </ion-item-->
+
+        <ion-item>
+          <ion-label>Minha Localização</ion-label>
+          <ion-toggle [(ngModel)]="minhaLocalizacao"></ion-toggle>
+        </ion-item>
+
+        <!----ion-item>
             <ion-label>Todas as cidades</ion-label>
             <ion-toggle [(ngModel)]="todasCidades" disabled="true"></ion-toggle>
-          </ion-item>
-  
-        </ion-list>
-      </ion-card-content>
+          </ion-item-->
 
-      <ion-card-content>
-      
-        <ion-card-title><b>Data</b></ion-card-title>
-        <!-- Toggles in a List -->
-        <ion-list>
-          <ion-item>
-            <ion-label>Todos</ion-label>
-            <ion-toggle [(ngModel)]="todos"></ion-toggle>
-          </ion-item>
-  
-          <ion-item>
-            <ion-label>Hoje</ion-label>
-            <ion-toggle [(ngModel)]="hoje"></ion-toggle>
-          </ion-item>
-  
-          <ion-item>
-            <ion-icon name="calendar"></ion-icon>
-            <ion-label>Escolher data</ion-label>
-            <ion-toggle [(ngModel)]="escolherData"></ion-toggle>
-          </ion-item>
-  
-        </ion-list>
-      </ion-card-content>
+      </ion-list>
+    </ion-card-content>
+
+    <ion-card-content>
+
+      <ion-card-title><b>Data</b></ion-card-title>
+      <!-- Toggles in a List -->
+      <ion-list>
+        <ion-item>
+          <ion-label>Todos</ion-label>
+          <ion-toggle [(ngModel)]="todos"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Hoje</ion-label>
+          <ion-toggle [(ngModel)]="hoje"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="calendar"></ion-icon>
+          <ion-label>Escolher data</ion-label>
+          <ion-toggle [(ngModel)]="escolherData"></ion-toggle>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
 
   </ion-card>
 
-    <!-- Expand -->
-    <ion-button expand="full" href="events">
+  <div class="ion-padding">
+    <ion-button expand="block" href="events" type="submit" class="ion-no-margin">
       <ion-icon slot="start" name="search"></ion-icon>
-      Pesquisar
+      Explorar
     </ion-button>
+  </div>
 
 </ion-content>
