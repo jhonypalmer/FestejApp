@@ -1,11 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title><b>Cadastrar Evento</b></ion-title>
+    <ion-title>create</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
   <ion-img src="/assets/categoria1.jpg"></ion-img>
 
   <form onsubmit="processForm(event)">
@@ -32,26 +31,28 @@
         <ion-input placeholder="Address Line 2"></ion-input>
       </ion-item>
 
-      <ion-list>
+    </ion-list>
 
-        <ion-item>
-          <ion-label>Data de Início</ion-label>
-          <ion-datetime displayFormat="DD/MMM/YYYY HH:mm" min="2019-06-01" max="2024-12-31"
-            pickerFormat="DD / MMM / YYYY HH mm"
-            monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez' doneText="Ok"
-            cancelText="Cancelar">
-          </ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label>Data de Término</ion-label>
-          <ion-datetime displayFormat="DD/MMM/YYYY HH:mm" min="2019-06-01" max="2024-12-31"
-            pickerFormat="DD / MMM / YYYY HH mm"
-            monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez' doneText="Ok"
-            cancelText="Cancelar">
-          </ion-datetime>
-        </ion-item>
+    <ion-list>
 
-      </ion-list>
+      <ion-item>
+        <ion-label>Data de Início</ion-label>
+        <ion-datetime displayFormat="DD/MMM/YYYY HH:mm" min="2019-06-01" max="2024-12-31"
+          pickerFormat="DD / MMM / YYYY HH mm"
+          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez' doneText="Ok"
+          cancelText="Cancelar">
+        </ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Data de Término</ion-label>
+        <ion-datetime displayFormat="DD/MMM/YYYY HH:mm" min="2019-06-01" max="2024-12-31"
+          pickerFormat="DD / MMM / YYYY HH mm"
+          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez' doneText="Ok"
+          cancelText="Cancelar">
+        </ion-datetime>
+      </ion-item>
+
+    </ion-list>
 
 
   </form>
