@@ -10,28 +10,19 @@
 <ion-content padding>
   <ion-img src="/assets/categoria1.jpg"></ion-img>
 
-  <form onsubmit="processForm(event)">
+  <form #f (ngSubmit)="submit(f)">
     <ion-list lines="full" class="ion-no-margin ion-no-padding">
       <ion-item>
         <ion-label position="stacked">Titulo do Evento <ion-text color="danger">*</ion-text>
         </ion-label>
-        <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+        <ion-input required type="text" name="nome"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label>Categorias</ion-label>
-        <ion-select interface="popover">
-          <ion-select-option value="gastro">Gastronomia</ion-select-option>
-          <ion-select-option value="show">Shows</ion-select-option>
-          <ion-select-option value="negocio">Negócios</ion-select-option>
-          <ion-select-option value="estudo">Estudos</ion-select-option>
+        <ion-select name="tipo_evento_id" value="1">
+          <ion-select-option value="1">Gastronomia</ion-select-option>
         </ion-select>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked">Endereço</ion-label>
-        <ion-input placeholder="Address Line 1"></ion-input>
-        <ion-input placeholder="Address Line 2"></ion-input>
       </ion-item>
 
     </ion-list>
@@ -40,31 +31,14 @@
 
       <ion-item>
         <ion-label>Data de Início</ion-label>
-        <ion-datetime displayFormat="DD/MMM/YYYY HH:mm" min="2019-06-01" max="2024-12-31"
-          pickerFormat="DD / MMM / YYYY HH mm"
-          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez' doneText="Ok"
-          cancelText="Cancelar">
-        </ion-datetime>
+        <ion-datetime name="data_evento" displayFormat="DD/MM/YYYY"></ion-datetime>
       </ion-item>
-      <ion-item>
-        <ion-label>Data de Término</ion-label>
-        <ion-datetime displayFormat="DD/MMM/YYYY HH:mm" min="2019-06-01" max="2024-12-31"
-          pickerFormat="DD / MMM / YYYY HH mm"
-          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez' doneText="Ok"
-          cancelText="Cancelar">
-        </ion-datetime>
-      </ion-item>
-
     </ion-list>
-
-
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">
+        <ion-icon slot="start" name="save"></ion-icon>
+        Salvar
+      </ion-button>
+    </div>
   </form>
-
-  <div class="ion-padding">
-
-    <ion-button expand="block" href="events" type="submit" class="ion-no-margin">
-      <ion-icon slot="start" name="save"></ion-icon>
-      Salvar
-    </ion-button>
-  </div>
 </ion-content>

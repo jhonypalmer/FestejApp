@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { AlertController } from '@ionic/angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: "app-profile",
@@ -10,14 +12,18 @@ export class ProfilePage implements OnInit {
   password = "";
   passwordConfirmation = "";
   cadastro = false;
-  perfil = false;
 
-  constructor() {}
+  constructor(
+    private alert: AlertController,
+  ) {
+  }
+
+  loginClick() {}
 
   ngOnInit() {}
 
-  cadastroClick() {
-    this.cadastro = true;
+  toogleCad() {
+    this.cadastro = !this.cadastro;
   }
 
   changeEmail(event) {
@@ -33,10 +39,13 @@ export class ProfilePage implements OnInit {
   }
 
   efetuaCadastro() {
-    alert(
-      this.email + " | " + this.password + " | " + this.passwordConfirmation
-    );
+    this.alert.create({
+      message: this.email + " | " + this.password + " | " + this.passwordConfirmation,
+      header: 'Atenção',
+      buttons: ['ok']
+    }).then((alert) => {
+      alert.present()
+    });
     this.cadastro = false;
-    this.perfil = true;
   }
 }
