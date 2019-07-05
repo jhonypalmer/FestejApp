@@ -5,7 +5,23 @@
 </ion-header>
 
 <ion-content>
-  <div>
+  <ion-card *ngIf='cadastro'>
+    <ion-card-header>
+      <ion-card-title>Cadastre-se</ion-card-title>
+      <ion-card-subtitle>Fique informado</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-input placeholder="exemplo@email.com" (change)='changeEmail($event)' [value]='email'></ion-input>
+      <ion-input placeholder="senha" type="password" (change)='changePassword($event)'></ion-input>
+      <ion-input placeholder="confirme sua senha" type="password" (change)='changePasswordConfirmation($event)'> 
+      </ion-input>
+      <ion-button expand="block" (click)='efetuaCadastro()'>Salvar</ion-button>
+      <ion-button expand="block" fill='outline' (click)='loginClick()'>Já possui conta?</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngIf='!cadastro'>
     <ion-row class='profile-section'>
       <ion-col size='2'>
         <ion-avatar>
@@ -43,7 +59,7 @@
       </ion-list>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button href="create">
+      <ion-fab-button [routerLink]="'/create'">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>

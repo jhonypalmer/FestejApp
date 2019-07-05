@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Evento extends Model
 {
@@ -15,6 +16,13 @@ class Evento extends Model
         'cpf_usuario',
         'cnpj_usuario',
     ];
+
+    public function setDataEventoAttribute($value)
+    {
+        $dt = explode('T', $value);
+        $this->attributes['data_evento'] = Carbon::createFromFormat('Y-m-d', $dt[0]);
+        $this->attributes['hora_evento'] = Carbon::createFromFormat('H:i:s.uP', $dt[1]);
+    }
 
     public function tipo()
     {
