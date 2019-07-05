@@ -1,56 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  selector: "app-profile",
+  templateUrl: "./profile.page.html",
+  styleUrls: ["./profile.page.scss"]
 })
 export class ProfilePage implements OnInit {
-  email = ''
-  password = ''
-  passwordConfirmation = ''
-  login = true
-  cadastro = false
-  perfil = false
+  email = "";
+  password = "";
+  passwordConfirmation = "";
+  cadastro = false;
+  perfil = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   cadastroClick() {
-    this.login = false;
     this.cadastro = true;
   }
 
-  loginClick() {
-    this.login = true;
-    this.cadastro = false;
-  }
-
   changeEmail(event) {
-    this.email = event.target.value
+    this.email = event.target.value;
   }
 
   changePassword(event) {
-    this.password = event.target.value
+    this.password = event.target.value;
   }
 
   changePasswordConfirmation(event) {
-    this.passwordConfirmation = event.target.value
-  }
-
-  efetuaLogin() {
-    alert(this.email + ' | ' + this.password)
-    this.login = false;
-    this.cadastro = false;
-    this.perfil = true
+    this.passwordConfirmation = event.target.value;
   }
 
   efetuaCadastro() {
-    alert(this.email + ' | ' + this.password + ' | ' + this.passwordConfirmation)
-    this.login = false;
+    alert(
+      this.email + " | " + this.password + " | " + this.passwordConfirmation
+    );
     this.cadastro = false;
-    this.perfil = true
+    this.perfil = true;
   }
 }

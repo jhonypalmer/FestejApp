@@ -14,7 +14,7 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private _loginService: LoginService) {}
 
   intercept(req: HttpRequest<unknown>, next: HttpHandler) {
-    const { token } = this._loginService;
+    const { currentToken: token } = this._loginService;
 
     if (token) {
       return next.handle(

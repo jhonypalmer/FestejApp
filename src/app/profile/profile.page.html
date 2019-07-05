@@ -5,20 +5,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngIf='login'>
-    <ion-card-header>
-      <ion-card-title>Ops!</ion-card-title>
-      <ion-card-subtitle>Você precisa se autenticar para cadastrar um evento.</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-input placeholder="exemplo@email.com" (change)='changeEmail($event)' [value]='email'></ion-input>
-      <ion-input placeholder="senha" type="password" (change)='changePassword($event)'></ion-input>
-      <ion-button expand="block" (click)='efetuaLogin()'>Entrar</ion-button>
-      <ion-button expand="block" fill='outline' (click)='cadastroClick()'>Cadastre-se</ion-button>
-    </ion-card-content>
-  </ion-card>
-
   <ion-card *ngIf='cadastro'>
     <ion-card-header>
       <ion-card-title>Cadastre-se</ion-card-title>
