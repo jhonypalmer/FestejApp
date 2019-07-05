@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
   { path: 'events', loadChildren: './events/events.module#EventsPageModule' },
   { path: 'create', loadChildren: './create/create.module#CreatePageModule' },
-  { path: 'edit-event', loadChildren: './edit-event/edit-event.module#EditEventPageModule' }
+  { path: 'edit-event', loadChildren: './edit-event/edit-event.module#EditEventPageModule' },
+  { path: 'cad-usuario', loadChildren: './cad-usuario/cad-usuario.module#CadUsuarioPageModule' }
 ];
 @NgModule({
   imports: [
