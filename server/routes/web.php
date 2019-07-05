@@ -35,6 +35,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->get('{id}', 'EventoController@read');
         $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
             $router->post('', 'EventoController@create');
+            $router->post('add-foto/{id}', 'EventoController@postAddFotoEvento');
             $router->put('{id}', 'EventoController@update');
             $router->delete('{id}', 'EventoController@delete');
         });
