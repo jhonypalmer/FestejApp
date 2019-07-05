@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Arquivo;
 
 class Evento extends Model
 {
@@ -24,6 +23,6 @@ class Evento extends Model
 
     public function fotos()
     {
-        return $this->belongsToMany(Arquivo::class, 'evento_foto', 'arquivo_id', 'evento_id');
+        return $this->belongsToMany(Arquivo::class, 'evento_foto', 'evento_id', 'arquivo_id');
     }
 }
