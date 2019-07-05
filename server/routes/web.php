@@ -30,7 +30,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
             $router->delete('{id}', 'UsuarioController@delete');
         });
     });
-    $router->group(['middleware' => 'jwt.auth', 'prefix' => 'evento'], function () use ($router) {
+    $router->group(['prefix' => 'evento'], function () use ($router) {
         $router->get('', 'EventoController@read');
         $router->get('{id}', 'EventoController@read');
         $router->group(['middleware' => 'jwt.auth'], function () use ($router) {
@@ -39,5 +39,5 @@ $router->group(['prefix' => 'api'], function () use ($router) {
             $router->put('{id}', 'EventoController@update');
             $router->delete('{id}', 'EventoController@delete');
         });
-    }); 
+    });
 });

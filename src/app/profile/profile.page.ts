@@ -10,7 +10,6 @@ export class ProfilePage implements OnInit {
   password = "";
   passwordConfirmation = "";
   cadastro = false;
-  perfil = false;
 
   constructor() {}
 
@@ -37,6 +36,5 @@ export class ProfilePage implements OnInit {
       this.email + " | " + this.password + " | " + this.passwordConfirmation
     );
     this.cadastro = false;
-    this.perfil = true;
   }
 }

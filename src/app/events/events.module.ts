@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import { Routes, RouterModule } from "@angular/router";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { EventsPage } from './events.page';
+import { EventsPage } from "./events.page";
+import { EventosApiService } from "./eventos-api.service";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: EventsPage
   }
 ];
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [EventsPage]
+  declarations: [EventsPage],
+  providers: [EventosApiService]
 })
 export class EventsPageModule {}

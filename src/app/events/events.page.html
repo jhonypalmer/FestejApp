@@ -9,37 +9,27 @@
 
 <ion-content>
   <ion-list>
-    <ion-card class="events-card">
+    <ion-card class="events-card" *ngFor="let evento of eventos">
       <ion-card-header>
-        <ion-card-title>{{title_card}}</ion-card-title>
+        <ion-card-title>{{ evento.nome }}</ion-card-title>
       </ion-card-header>
+
+      <!-- TODO: Adicionar imagem -->
       <ion-img src="/assets/festejapp.jpg"></ion-img>
+
       <ion-card-content>
-        <p>Show para lembrar todos as pessoas esquecidas na sociedade.</p>
-      </ion-card-content>
-
-      <ion-row>
-        <ion-col>
-          <button ion-button icon-left clear small>
-            <!--div>22/06/19</div-->
+        <div style="display: flex; flex-direction: row; align-items: center">
+          <div style="padding-right: 10px">
+            {{ evento.data_evento + " " + evento.hora_evento | date }}
             <ion-icon name="calendar"></ion-icon>
-          </button>
-        </ion-col>
-        <ion-col>
-          <button ion-button icon-left clear large>
-            <!--div>22h00</div-->
-            <ion-icon name="clock"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
+          </div>
 
-
+          <ion-button (click)="openMap()">
+            Localização
+            <ion-icon name="pin"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
     </ion-card>
   </ion-list>
-
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-
 </ion-content>
