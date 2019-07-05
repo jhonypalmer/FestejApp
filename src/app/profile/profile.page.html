@@ -48,8 +48,32 @@
       </ion-col>
     </ion-row>
 
+    <ion-list>
+        <ion-list-header>
+          Eventos Cadastrados
+        </ion-list-header>
+
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="./avatar-finn.png">
+          </ion-avatar>
+          <ion-label>
+            <h2>Título do Evento</h2>
+            <h3>Data do Evento</h3>
+            <p>Descrição do Evento</p>
+          </ion-label>
+
+          <ion-fab-button expand="full" href="edit-event">
+            <ion-icon name="create"></ion-icon>
+          </ion-fab-button>
+          
+        </ion-item>
+
+        
+      </ion-list>
+
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button expand="full" href="create">
+      <ion-fab-button href="create">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
