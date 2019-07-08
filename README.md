@@ -31,3 +31,17 @@ Abra o prompt de comando dentro da pasta do projeto e execute
 cd FestejApp
 ionic serve
 ~~~
+
+# Server
+~~~
+cd server
+composer install
+cp .env.example .env
+~~~
+Inserir credenciais do banco de dados no arquivo .env
+Banco de dados deve estar criado e nome adicionado no .env
+Adicionar `JWT_SECRET=chave_privada` no arquivo .env
+~~~
+php artisan migrate
+php -S localhost:8000 -t public
+~~~
